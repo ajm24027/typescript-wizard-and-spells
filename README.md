@@ -24,9 +24,9 @@ abstract class Spell {
 }
 ```
 
-• `_name` - is used to store the name of the spell (unreachable by anything not of this class).
-• `get name` - a getter function that returns the name of the spell.
-• `cast()` - an abstract method that will be used (differently) for the Frost and Fire Spell Classes.
+• `_name` - is used to store the name of the spell (unreachable by anything not of this class).;NBSP
+• `get name` - a getter function that returns the name of the spell.;NBSP
+• `cast()` - an abstract method that will be used (differently) for the Frost and Fire Spell Classes.;NBSP
 
-Abstract method()
+Abstract method();NBSP
 : Abstract methods are used to define the behavior of a class without specifying the details of how the behavior is implemented. This allows subclasses to provide different implementations of the behavior, depending on the specific needs of the subclass.

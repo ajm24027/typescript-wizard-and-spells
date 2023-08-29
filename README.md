@@ -122,7 +122,7 @@ let sumOfStrings = sum('Hello', 'World') // "HelloWorld"
 
 #### Creating the Wizard Class
 
-First we define the Wizard Class and then we say that the Wizard class takes in a generic type parameter of `<S>`. In the next line, we see that we create a private spellbook property that accepts an array of Spell objects - `spellBook: S[] = []`
+First we define the Wizard Class and then we say that the Wizard class takes in a generic type parameter of `<S>`, which means that we're saying - wherever we use S, it's actually a spell. In the next line, we see that we create a private spellbook property that accepts an array of Spell objects - `spellBook: S[] = []`
 
 ```typescript
 class Wizard<S extends Spell> {
@@ -136,7 +136,7 @@ class Wizard<S extends Spell> {
 
 The Wizard class has two methods that we code inside of it:
 
-- `castAllAtOnce()` - which goes through the array of Spell objects using the `forEach()` and uses the `cast()` method on each spell in the spellbook array.
+- `castAllAtOnce()` - which goes through the array of Spell objects using the `forEach()` method and uses the `cast()` method on each spell in the spellbook array.
 - `castFromSpellBook()` - this method takes in a name that is of the type `SpellName<S>` (the condtional alias type we setup from before - which ensures that the name is either a Frost or Fire Spell name.). Then the method attempts to find the spell name passed into it in the Wizard's Spellbook. If it's found, the spell's `cast()` method is used on the spell. Otherwise, an error is thrown to alert the user that the Wizard doesn't have the spell in their spellbook.
 
 ```typescript
